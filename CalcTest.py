@@ -1,3 +1,5 @@
+from IPython.display import clear_output 
+
 final_command = "INITIATE PROGRAM"
 
 while final_command != "NO":
@@ -57,8 +59,12 @@ while final_command != "NO":
             print('\n')
             print("Thanks for using the Calculation Program! :))")
             
-            final_command = str(input("Do you want go back to Main Menue? Say 'Yes' or 'No': "))
+            final_command = str(input("Do you want go back to Main Menue?\nWARNING: It will Erase all Data.\nSay 'Yes' or 'No': "))
             final_command = final_command.upper()
+
+            if final_command == "YES":
+                clear_output()
+                continue
 
     elif option_chosen == 2:
         a = int (0)
@@ -84,14 +90,23 @@ while final_command != "NO":
         
         else:
             print("Thankyou for using the Quadratic Calculator Program :))")
-            final_command = str(input("Do you want to go back to Main Menue? Say 'Yes' or 'No': "))
+            final_command = str(input("Do you want to go back to Main Menue?\nWARNING: It will Erase all Data.\nSay 'Yes' or 'No': "))
             final_command = final_command.upper()
+
+            if final_command == "YES":
+                clear_output()
+                continue
     
     else:
         print("Invalid Choice!")
 
-        final_command = str(input("Do you want to go back to Main Menue? Say 'Yes' or 'No': "))
+        final_command = str(input("Do you want to go back to Main Menue?\nWARNING: It will Erase all Data.\nSay 'Yes' or 'No': "))
         final_command = final_command.upper()
+
+        if final_command == "YES":
+            clear_output()
+            continue
+
 
 else:
     print("Thanks for using our Calculator Program. :))")
